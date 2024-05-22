@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <style>
+        /* Style for user list */
+        #userList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #userList li {
+            margin-bottom: 10px;
+        }
+
+        /* Style for popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .popup-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Management System</h2>
+    <button onclick="showAddUserForm()">Add User</button>
+    <ul id="userList">
+        <!-- Users will be listed here -->
+    </ul>
+
+    <!-- Popup for confirmation -->
+    <div id="deletePopup" class="popup">
+        <div class="popup-content">
+            <p>Are you sure you want to delete this user?</p>
+            <div class="popup-buttons">
+                <button onclick="deleteUserConfirmed()">Yes</button>
+                <button onclick="closePopup()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample user data (replace with your data)
+        let users = [
+            { id: 1, name: "John Doe", email: "john@example.com" },
+            { id: 2, name: "Jane Doe", email: "jane@example.com" },
+            { id: 3, name: "Alice Smith", email: "alice@example.com" }
+        ];
+
+        // Function to display users
+        function displayUsers() {
+            const userList = document.getElementById("userList");
+            userList.innerHTML = "";
+            users.forEach(user => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `${user.name} - ${user.email} 
+                    <button onclick="showEditUserForm(${user.id})">Edit</button>
+                    <button onclick="showDeleteConfirmation(${user.id})">Delete</button>`;
+                userList.appendChild(listItem);
+            });
+        }
+
+        // Function to show popup for confirmation
+        function showDeleteConfirmation(userId) {
+            const popup = document.getElementById("deletePopup");
+            popup.dataset.userId = userId;
+            popup.style.display = "block";
+        }
+
+        // Function to close popup
+        function closePopup() {
+            const popup = document.getElementById("deletePopup");
+            popup.style.display = "none";
+        }
+
+        // Function to delete user after confirmation
+        function deleteUserConfirmed() {
+            const userId = parseInt(document.getElementById("deletePopup").dataset.userId);
+            users = users.filter(user => user.id !== userId);
+            displayUsers();
+            closePopup();
+        }
+
+        // Function to show form for adding user (you can implement this)
+        function showAddUserForm() {
+            // Implement this function to show a form for adding a new user
+            alert("Add user form will be shown here");
+        }
+
+        // Function to show form for editing user (you can implement this)
+        function showEditUserForm(userId) {
+            // Implement this function to show a form for editing the selected user
+            alert(Edit user form for user with ID ${userId} will be shown here);
+        }
+
+        // Initial display of users
+        displayUsers();
+    </script>
+</body>
+</html>

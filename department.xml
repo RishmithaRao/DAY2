@@ -1,0 +1,76 @@
+1. Department
+XML:
+
+xml
+Sample code
+<departments>
+  <department>
+    <id>1</id>
+    <name>Computer Science</name>
+    <head>Dr. Smith</head>
+  </department>
+  <department>
+    <id>2</id>
+    <name>Electrical Engineering</name>
+    <head>Dr. Johnson</head>
+  </department>
+  <department>
+    <id>3</id>
+    <name>Mechanical Engineering</name>
+    <head>Dr. Brown</head>
+  </department>
+</departments>
+
+2. Year
+XML:
+
+xml
+Sample code
+<years>
+  <year>
+    <id>1</id>
+    <name>Freshman</name>
+  </year>
+  <year>
+    <id>2</id>
+    <name>Sophomore</name>
+  </year>
+  <year>
+    <id>3</id>
+    <name>Junior</name>
+  </year>
+  <year>
+    <id>4</id>
+    <name>Senior</name>
+  </year>
+</years>
+ 
+ 3.Student
+
+
+XML:
+
+xml
+Copy code
+<students>
+  <student>
+    <id>1</id>
+    <name>John Doe</name>
+    <department>Computer Science</department>
+    <year>Junior</year>
+  </student>
+  <student>
+    <id>2</id>
+    <name>Jane Smith</name>
+    <department>Electrical Engineering</department>
+    <year>Senior</year>
+  </student>
+  <student>
+    <id>3</id>
+    <name>Michael Brown</name>
+    <department>Mechanical Engineering</department>
+    <year>Sophomore</year>
+  </student>
+</students>
+
+

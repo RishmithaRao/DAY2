@@ -1,0 +1,79 @@
+JSON:
+
+json
+Sample code
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "Computer Science",
+      "head": "Dr. Smith"
+    },
+    {
+      "id": 2,
+      "name": "Electrical Engineering",
+      "head": "Dr. Johnson"
+    },
+    {
+      "id": 3,
+      "name": "Mechanical Engineering",
+      "head": "Dr. Brown"
+    }
+  ]
+}
+
+2.Year
+
+JSON:
+
+json
+Sample code
+{
+  "years": [
+    {
+      "id": 1,
+      "name": "Freshman"
+    },
+    {
+      "id": 2,
+      "name": "Sophomore"
+    },
+    {
+      "id": 3,
+      "name": "Junior"
+    },
+    {
+      "id": 4,
+      "name": "Senior"
+    }
+  ]
+}
+
+3.Student
+
+JSON:
+
+json
+Sample code
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "department": "Computer Science",
+      "year": "Junior"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "department": "Electrical Engineering",
+      "year": "Senior"
+    },
+    {
+      "id": 3,
+      "name": "Michael Brown",
+      "department": "Mechanical Engineering",
+      "year": "Sophomore"
+    }
+  ]
+}

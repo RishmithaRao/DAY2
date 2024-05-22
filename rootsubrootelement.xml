@@ -1,0 +1,26 @@
+<department>
+  <year value="2024">
+    <student>
+      <name>Alice</name>
+      <id>001</id>
+      <major>Computer Science</major>
+    </student>
+    <student>
+      <name>Bob</name>
+      <id>002</id>
+      <major>Mechanical Engineering</major>
+    </student>
+  </year>
+  <year value="2023">
+    <student>
+      <name>Charlie</name>
+      <id>003</id>
+      <major>Electrical Engineering</major>
+    </student>
+    <student>
+      <name>David</name>
+      <id>004</id>
+      <major>Civil Engineering</major>
+    </student>
+  </year>
+</department>
